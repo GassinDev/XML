@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Aqui estamos declarando que es un schema, lo de la url no lo entiendo, no se cual hay que poner cuando ni como
+ni donde, pero bueno, se puede copiar de un ejercicio ya hecho -->
+    
+    <xs:element name="proyecto" type="Tproyecto" /> <!-- Aqui estamos poniendo lo que vendría a ser el elemento raiz (root element) y estamos declarandolo con el tipo
+    "Tproyecto", que es un tipo que no existe, simplemente hemos puesto proyecto con una T delante, esto se debe a que vamos a crear nosotros ese tipo de elemento-->
+
+    <xs:complexType name="Tproyecto"> <!-- Aquí lo creamos, le decimos que es un tipo complejo, para mas informacion sobre estas cosas, consultar los apuntes de ango, porque
+    yo no se lo que es un tipo complejo -->
+        <xs:sequence> <!-- Abrimos una secuencia, tampoco sé lo que es pero lo intuyo -->
+            <xs:element name="datos_proyecto" type="Tdatos_proyecto"/> 
+            <xs:element name="dedicatoria" type="Tdedicatoria" />
+            <xs:element name="apartado" type="Tapartado" minOccurs="1" maxOccurs="unbounded"/> 
+            <!-- Para resumir, en estas 3 lineas estamos estableciendo que Tproyecto contiene 3 elementos distintos
+            y cada uno tiene su tipo, en este caso nosotros creamos los 3, pero podrian ser cosas tipo "xs:string", si fuesen simples cadenas de texto, o xs:date si fuesen
+        fechas... va por ahi la cosa. Hay más tipos predefinidos, obviamente
+    Y bueno, tambien podemos decirle minOccurs="X" para decirle cual es el minimo de elementos de este tipo que pueden aparecer, y max0ccurs, para el maximo
+Se puede poner max0ccurs unbounded para que no tenga límite -->
+            
+        </xs:sequence>
+        <!-- Una vez fuera de la secuencia, creamos un atributo, este atributo, al estar dentro del tipo complejo "Tproyecto" pertenece a este. Se puede poner un atributo que
+        se llama "use" y ahi le especificamos, algo asi como (use="required") u optional  -->
+        <xs:attribute name="lang" type="Tlang" />
+    </xs:complexType>
+
+    <!-- Aqui creamos el tipo complejo Tapartado -->
+
+    <xs:complexType name="Tapartado">
+        <xs:sequence> <!-- otra secuencia -->
+            <xs:element name="titulo" type="xs:string" /> <!-- Aqui usamos el xs:string porque titulo es simplemente una cadena de texto, no tiene cosas dentro ni nada -->
+            <xs:element name="seccion" type="Tseccion" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" /> <!-- xs:ID tambien es un tipo predefinido -->
+    </xs:complexType> 
+
+    <xs:complexType name="Tseccion">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" />
+            <xs:element name="parrafo" type="Tparrafo" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+<!-- No comento nada por aquí porque es todo exactamente lo mismo, aprovecho para recomendar que, en el examen, cuando pida hacer un xsd en base a un xml que el nos da, 
+lo recomendable es leerse, apuntarse, y entender la estructura del xml para ir siguiendola a la hora de hacer esto, hay que tener en cuenta que lo que se hace en un xsd es
+crear unas pautas para un documento xml, si ese documento ya está creado, el rol se invierte, y es el xsd el que tiene que adaptarse al xml -->
+    <xs:complexType name="Tdedicatoria">
+        <xs:sequence>
+            <xs:element name="parrafo" type="Tparrafo" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tparrafo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="estilo" type="Testilo" default="normal"/> <!-- Aqui ha aparecido algo nuevo, en un atributo tenemos un "default=" esto significa
+                que si no se especifica otra, tendrá ese valor por defecto -->
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Testilo"> <!-- Aqui hay un tipo simple -->
+        <xs:restriction base="xs:string"> <!-- Aqui estamos aplicando una restriccion, que puede ser desde una lista de elementos, hasta un rango de valores, en este 
+        caso, es un patrón, para mas informacion sobre estas cosas:  https://www.w3schools.com/xml/schema_facets.asp -->
+            <xs:pattern value="cita|codigo|revisar|normal" /> <!-- Y aquí el patrón es que debe ser uno de estos valores -->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Tlang">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="es|en|fr|ge" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tdatos_proyecto">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="autor" type="Tautor" maxOccurs="unbounded"/>
+            <xs:element name="fecha_publicacion" type="xs:date" />
+            <xs:element name="paginas" type="Tpaginas"/>
+            <xs:element name="bibliografia" type="Tbibliografia"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Tpaginas">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="100"/> <!-- Aqui se puede ver una de esas restricciones que determinan un rango de valores, hay una etiqueta para el minimo y otra
+            para el maximo -->
+            <xs:maxInclusive value="200"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tautor">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tbibliografia">
+        <xs:sequence>
+            <xs:element name="referencia" type="Treferencia" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Treferencia">
+        <xs:simpleContent> <!-- Por último, simple content es un elemento de complexType que contiene extensiones o restricciones, en este caso una extension -->
+            <xs:extension base="xs:string"> <!-- Lo que está haciendo es insertar en referencia un string de uso opcional que en este caso es para una URL -->
+                <xs:attribute name="enlace" type="xs:anyURI" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

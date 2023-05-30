@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<listado>
+  <mantiene correo="amanda@local.com">Amanda Smith</mantiene>
+  <contacto>
+    <tel>4455</tel>
+    <particular>6666644</particular>
+    <tel>6789865</tel>
+  </contacto>
+  <responsables>1. Alfredo Fango,  2. Frank Rutz,  3. Steven Borg</responsables>
+  <detalle>
+    <!-- Espacio aula-01: Aula 1nformáticos-->
+    <item>1 Impresora Laser </item>
+    <item>2 Teclados mecánicos </item>
+    <item>12 PC HP </item>
+    <!-- Espacio aula-02: Aula 1 informáticos-->
+    <item>4 Ratones</item>
+    <item>6 Comprobador redes</item>
+    <item>12 Monitores</item>
+    <!-- Espacio A000:  Pendiente asignación-->
+  </detalle>
+</listado>

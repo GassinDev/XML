@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<escrutinio_sitio fecha="2011-11-21">
+  <num_a_elegir>27</num_a_elegir>
+  <nombre_disputado>concejales</nombre_disputado>
+  <nombre_sitio>Jerez de la Frontera</nombre_sitio>
+  <nombre_sitio>Jerez, capital del vino</nombre_sitio>
+  <votos escrutado="100">
+    <contabilizados>
+      <cantidad>99137</cantidad>
+      <porcentaje>60.64</porcentaje>
+    </contabilizados>
+    <abstenciones>
+      <cantidad>64343</cantidad>
+      <porcentaje>39.36</porcentaje>
+    </abstenciones>
+    <nulos>
+      <cantidad>1047</cantidad>
+      <porcentaje>1.06</porcentaje>
+    </nulos>
+    <blancos>
+      <cantidad>2324</cantidad>
+      <porcentaje>2.37</porcentaje>
+    </blancos>
+  </votos>
+  <resultados>
+    <numero_partidos>11</numero_partidos>
+    <partido cobertura="nacional">
+      <id_partido>B3176</id_partido>
+      <nombre siglas="PP">Partido Popular</nombre>
+      <electos>15</electos>
+      <votos_numero>45667</votos_numero>
+      <votos_porciento>46.56</votos_porciento>
+    </partido>
+    <partido cobertura="nacional">
+      <id_partido>D3222</id_partido>
+      <nombre siglas="PSOE">Partido Socialista Obrero Español</nombre>
+      <electos>5</electos>
+      <votos_numero>14358</votos_numero>
+      <votos_porciento>14.64</votos_porciento>
+    </partido>
+    <partido cobertura="local">
+      <id_partido>1718</id_partido>
+      <nombre>F.C.J.</nombre>
+      <electos>4</electos>
+      <votos_numero>13763</votos_numero>
+      <votos_porciento>14.03</votos_porciento>
+    </partido>
+    <partido cobertura="nacional">
+      <id_partido>2521</id_partido>
+      <nombre>IULV-CA</nombre>
+      <electos>3</electos>
+      <votos_numero>11272</votos_numero>
+      <votos_porciento>11.49</votos_porciento>
+    </partido>
+    <partido cobertura="regional">
+      <id_partido>3159</id_partido>
+      <nombre>PSA-EP-And</nombre>
+      <electos>0</electos>
+      <votos_numero>3941</votos_numero>
+      <votos_porciento>4.02</votos_porciento>
+    </partido>
+    <partido cobertura="nacional">
+      <id_partido>3784</id_partido>
+      <nombre>UPyD</nombre>
+      <electos>0</electos>
+      <votos_numero>2992</votos_numero>
+      <votos_porciento>3.05</votos_porciento>
+    </partido>
+    <partido cobertura="local">
+      <id_partido>3788</id_partido>
+      <nombre>URJ</nombre>
+      <electos>0</electos>
+      <votos_numero>1265</votos_numero>
+      <votos_porciento>1.29</votos_porciento>
+    </partido>
+    <partido cobertura="local">
+      <id_partido>2423</id_partido>
+      <nombre>I.P.J</nombre>
+      <electos>0</electos>
+      <votos_numero>1007</votos_numero>
+      <votos_porciento>1.03</votos_porciento>
+    </partido>
+    <partido cobertura="local">
+      <id_partido>8811</id_partido>
+      <nombre>B.U.X.</nombre>
+      <electos>0</electos>
+      <votos_numero>654</votos_numero>
+      <votos_porciento>0.67</votos_porciento>
+    </partido>
+    <partido cobertura="local">
+      <id_partido>2989</id_partido>
+      <nombre>P.I.BB.UU</nombre>
+      <electos>0</electos>
+      <votos_numero>516</votos_numero>
+      <votos_porciento>0.53</votos_porciento>
+    </partido>
+    <partido cobertura="nacional">
+      <id_partido>2895</id_partido>
+      <nombre>P.C.P.E.</nombre>
+      <electos>0</electos>
+      <votos_numero>331</votos_numero>
+      <votos_porciento>0.34</votos_porciento>
+    </partido>
+  </resultados>
+</escrutinio_sitio>

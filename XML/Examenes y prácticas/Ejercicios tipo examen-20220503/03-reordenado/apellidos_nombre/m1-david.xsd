@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz -->
+    <xs:element name="xbel" type="T_xbel" />
+
+    <!-- Tipo complejo => T_xbel -->
+    <xs:complexType name="T_xbel">
+
+        <xs:sequence>
+            <xs:element name="owner" type="xs:string" />
+            <xs:element name="desc" type="xs:string" minOccurs="0" />
+            <xs:element name="folder" type="T_folder" maxOccurs="unbounded" />
+        </xs:sequence>
+
+        <xs:attribute name="version" type="T_version" use="required" />
+        <xs:attribute name="added" type="xs:date" use="optional" />
+
+    </xs:complexType>
+
+    <!-- Tipo simple => T_version -->
+    <xs:simpleType name="T_version">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo complejo => T_folder -->
+    <xs:complexType name="T_folder">
+        <xs:sequence>
+            <xs:element name="title"/>
+            <xs:element name="desc" minOccurs="0" />
+            <xs:element name="bookmark" type="T_bookmark" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+
+        <xs:attribute name="folded" type="T_folded" />
+    </xs:complexType>
+
+    <!-- Tipo simple => T_folded -->
+    <xs:simpleType name="T_folded">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="yes" />
+            <xs:enumeration value="no" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Tipo complejo => T_bookmark -->
+    <xs:complexType name="T_bookmark">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="desc" type="xs:string" minOccurs="0" />
+            <xs:element name="ranking" type="T_ranking" minOccurs="0" />
+            <xs:element name="tag" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+
+        <xs:attribute name="href" type="xs:anyURI" use="required" />
+    </xs:complexType>
+
+    <!-- Tipo complejo => T_ranking -->
+    <xs:complexType name="T_ranking">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="type" type="T_ranking_type" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- Tipo simple => T_ranking_type -->
+    <xs:simpleType name="T_ranking_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="google" />
+            <xs:enumeration value="altavista" />
+            <xs:enumeration value="yahoo" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

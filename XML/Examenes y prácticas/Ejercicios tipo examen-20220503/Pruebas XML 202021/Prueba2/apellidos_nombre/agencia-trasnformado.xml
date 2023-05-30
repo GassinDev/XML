@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Agencia: Viajes Romero-->
+<ofertas>
+  <oferta>
+    <destino tipo="Ruta">Jaen. Del 2021-10-03 al 2021-10-06</destino>
+    <id>Jaen-004</id>
+    <precio moneda="libras">1200.1</precio>
+    <visita>
+      <a href="http://ubeda.com/rutas.html">(1) Úbeda y Baeza</a>
+      <descr>Histórico ~ Monumental</descr>
+    </visita>
+    <visita>
+      <a href="http://jaen.es/castillo">(2) Castillo de Santa Catalina</a>
+      <descr>Ciudad ~ Histórico ~ Monumental</descr>
+    </visita>
+  </oferta>
+  <oferta>
+    <destino tipo="Citi Break">Oporto. Del 2021-04-12 al 2021-04-17</destino>
+    <id>Oporto-001</id>
+    <precio moneda="euros">425.5</precio>
+    <visita>
+      <a href="http://clerigos.com">(1) Iglesia y Torre de los Clérigos</a>
+      <descr>Cultural ~ Monumental</descr>
+    </visita>
+    <visita>
+      <a href="http://local.com">(2) Bodega Sandeman</a>
+      <descr>Enológico ~ Histórico</descr>
+    </visita>
+  </oferta>
+</ofertas>

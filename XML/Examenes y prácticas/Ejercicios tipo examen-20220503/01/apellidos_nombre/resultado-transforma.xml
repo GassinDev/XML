@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<memoria fecha="2018-12-14">
+  <titular>LMSGI (Castellano)</titular>
+  <autores>Morgan, Dexter y Torvalds, Linus</autores>
+  <a href="http://cica.es/articulo.pdf">Una nueva visión del software web</a>
+  <a href="fto://rediris.es/docs/inet.pdf">Un nuevo mapa del nucleo de la red</a>
+  <blockquote>
+    <p>A nuestros queridos alumnos</p>
+  </blockquote>
+  <texto>
+    <h2>(Apart_01)Introducción  a  la  administración de Linux</h2>
+    <h3>Objetivo de la práctica </h3>
+    <p>El objetivo fundamental de esta práctica es que sefamiliarice con las diferentes interfaces gráficas y de texto que posee Linux Debian. Concretamente se centrará la atención en las interfaces GNOME y KDE así como en el uso del shell Bash (Bourne again shell). </p>
+    <h2>(Apart_02)Administración en red del S.O. Linux</h2>
+    <h3>Introducción</h3>
+    <p> En una red de área local (LAN) los equipos están configurados de forma que sea posible la comunicación entre los mismos, el acceso  a  otros equipos  que proporcionan  servicios y el acceso al exterior de dicha red en el caso de que sea necesario  solicitar  servicios  que  no  proporcionan los servidores locales.</p>
+    <h3>Objetivo de la práctica</h3>
+    <p>El objetivo de esta práctica es descubrir la configuración de la red  en la que está operando su equipo. Elalumno deberá  descubrir  la configuración IP de éste (dirección física, dirección IP, máscara de red, servidores, etc.), así como la de otros. </p>
+    <p> El segundo objetivo de  esta práctica es que  el  alumno se  familiarice con el  uso de las herramientas de  monitorización que  existen para redes en las que todos  los  equipos comparten un medio común. El uso de un medio  común, como sucede con las redes Ethernet, puede generar problemas bajo de terminadas condiciones,  los  cuales  pueden prevenirse o detectarse  con la utilización de las he rramientas aquí estudiadas.
+      </p>
+    <h2>(Apart_03)Programación Shell-script en Linux</h2>
+    <h2>(Apart_04)Introducción a la Programación Web</h2>
+    <h3>Despliegue de aplicaciones web </h3>
+  </texto>
+</memoria>

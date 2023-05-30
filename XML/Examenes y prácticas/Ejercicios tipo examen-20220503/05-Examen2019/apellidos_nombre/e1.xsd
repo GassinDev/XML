@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="inventario" type="Tinventario"/>
+
+    <xs:complexType name="Tinventario">
+        <xs:sequence>
+            <xs:element name="responsable" type="xs:string" minOccurs="1"/>
+            <xs:element name="mail" type="xs:string" minOccurs="1"/>
+            <xs:element name="tel" type="TTtel" maxOccurs="3" minOccurs="0"/>
+            <xs:element name="espacio" type="Tespacio" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Ttel">
+        <xs:restriction base="xs:string">
+            <!-- <xs:maxLength value="8"/>
+            <xs:minLength value="4"/> -->
+            <xs:pattern value="[0-9]{4,8}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TTtel">
+        <xs:simpleContent>
+            <xs:extension base="Ttel">
+                <xs:attribute name="tipo" type="Ttipo" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Ttipo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="trabajo|móvil|particular"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tespacio">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="responsable" type="xs:string"/>
+            <xs:element name="item" type="Titem" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:ID" />
+    </xs:complexType>
+
+    <xs:complexType name="Titem">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="ns" type="xs:string"/>
+            <xs:element name="cantidad" type="xs:integer"/>
+            <xs:element name="categoria" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

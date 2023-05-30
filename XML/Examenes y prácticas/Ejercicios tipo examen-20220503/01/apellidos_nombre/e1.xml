@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<proyecto lang="es">
+  <datos_proyecto>
+    <titulo>LMSGI</titulo>
+    <autor>
+      <nombre>Dexter</nombre>
+      <apellidos>Morgan</apellidos>
+    </autor>
+    <autor>
+      <nombre>Linus</nombre>
+      <apellidos>Torvalds</apellidos>
+    </autor>
+    <fecha_publicacion>2018-12-14</fecha_publicacion>
+    <paginas>144</paginas>
+    <bibliografia>
+      <referencia enlace="http://cica.es/articulo.pdf">Una nueva visión del software web</referencia>
+      <referencia enlace="fto://rediris.es/docs/inet.pdf">Un nuevo mapa del nucleo de la red</referencia>
+    </bibliografia>
+  </datos_proyecto>
+  <dedicatoria>
+    <parrafo estilo="cita">A nuestros queridos alumnos</parrafo>
+  </dedicatoria>
+  <apartado id="Apart_01">
+    <titulo>Introducción  a  la  administración de Linux</titulo>
+    <seccion>
+      <titulo>Objetivo de la práctica </titulo>
+      <parrafo estilo="normal">El objetivo fundamental de esta práctica es que sefamiliarice con las diferentes interfaces gráficas y de texto que posee Linux Debian. Concretamente se centrará la atención en las interfaces GNOME y KDE así como en el uso del shell Bash (Bourne again shell). </parrafo>
+      <parrafo estilo="revisar">Además se proporcionarán las nociones necesarias para la administración básica del sistema operativo.</parrafo>
+    </seccion>
+  </apartado>
+  <apartado id="Apart_02">
+    <titulo>Administración en red del S.O. Linux</titulo>
+    <seccion>
+      <titulo>Introducción</titulo>
+      <parrafo estilo="cita"> En una red de área local (LAN) los equipos están configurados de forma que sea posible la comunicación entre los mismos, el acceso  a  otros equipos  que proporcionan  servicios y el acceso al exterior de dicha red en el caso de que sea necesario  solicitar  servicios  que  no  proporcionan los servidores locales.</parrafo>
+    </seccion>
+    <seccion>
+      <titulo>Objetivo de la práctica</titulo>
+      <parrafo estilo="normal">El objetivo de esta práctica es descubrir la configuración de la red  en la que está operando su equipo. Elalumno deberá  descubrir  la configuración IP de éste (dirección física, dirección IP, máscara de red, servidores, etc.), así como la de otros. </parrafo>
+      <parrafo estilo="codigo"> El segundo objetivo de  esta práctica es que  el  alumno se  familiarice con el  uso de las herramientas de  monitorización que  existen para redes en las que todos  los  equipos comparten un medio común. El uso de un medio  común, como sucede con las redes Ethernet, puede generar problemas bajo de terminadas condiciones,  los  cuales  pueden prevenirse o detectarse  con la utilización de las he rramientas aquí estudiadas.
+      </parrafo>
+    </seccion>
+  </apartado>
+  <apartado id="Apart_03">
+    <titulo>Programación Shell-script en Linux</titulo>
+  </apartado>
+  <apartado id="Apart_04">
+    <titulo>Introducción a la Programación Web</titulo>
+    <seccion>
+      <titulo>Despliegue de aplicaciones web </titulo>
+    </seccion>
+  </apartado>
+</proyecto>

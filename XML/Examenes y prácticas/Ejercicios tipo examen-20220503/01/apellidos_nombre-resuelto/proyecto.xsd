@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="proyecto" type="Tproyecto" />
+
+    <xs:complexType name="Tproyecto">
+        <xs:sequence>
+            <xs:element name="datos_proyecto" type="Tdatos_proyecto" />
+            <xs:element name="dedicatoria" type="Tdedicatoria" />
+            <xs:element name="apartado" type="Tapartado" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="lang" type="xs:string"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="Tapartado">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" />
+            <xs:element name="seccion" type="Tseccion" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" />
+    </xs:complexType>
+
+    <xs:complexType name="Tseccion">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="parrafo" type="Tparrafo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tdedicatoria">
+        <xs:sequence>
+            <xs:element name="parrafo" type="Tparrafo" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tparrafo">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="estilo" type="Testilo" default="normal"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Testilo">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="cita|codigo|revisar|normal"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tdatos_proyecto">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string" />
+            <xs:element name="autor" type="Tautor" maxOccurs="unbounded" />
+            <xs:element name="fecha_publicacion" type="xs:date" />
+            <xs:element name="paginas" type="Tpaginas" />
+            <xs:element name="bibliografia" type="Tbibliografia"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="Tpaginas_base">
+        <xs:restriction base="xs:integer">
+                <xs:minInclusive value="100" />
+                <xs:maxInclusive value="200" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tpaginas">
+        <xs:simpleContent>
+            <xs:extension base="Tpaginas_base">
+                <xs:attribute name="formato" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Tautor">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="apellidos" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tbibliografia">
+        <xs:sequence>
+            <xs:element name="referencia" type="Treferencia" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Treferencia">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="enlace" type="xs:anyURI" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>

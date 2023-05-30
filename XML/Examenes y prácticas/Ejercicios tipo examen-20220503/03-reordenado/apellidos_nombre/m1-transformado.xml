@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favoritos propietario="Armando Bronca Segura">
+  <fecha>2018-12-12</fecha>
+  <!-- Comentario:  -->
+  <!--+++ Bookmarks Bar - Browser view-->
+  <item>
+    <puntos>83.1</puntos>
+    <titulo>Qt Documentation</titulo>
+    <url>http://doc.qt.io/</url>
+    <etiquetas>Culture#International#Europe</etiquetas>
+  </item>
+  <item>
+    <puntos>75.2</puntos>
+    <titulo>Qt Home Page</titulo>
+    <url>http://qt.io/</url>
+    <etiquetas>Culture</etiquetas>
+  </item>
+  <!-- Comentario:  -->
+  <!-- >>> Bookmarks Menu - to internal management-->
+  <item>
+    <puntos>85.7</puntos>
+    <titulo>reddit.com: what's new online!</titulo>
+    <url>http://reddit.com/</url>
+    <etiquetas>News#Tech</etiquetas>
+  </item>
+  <item>
+    <puntos>75.2</puntos>
+    <titulo>reddit.com: what's new online!</titulo>
+    <url>http://reddit.com/</url>
+    <etiquetas>News#Tech#Lunar view</etiquetas>
+  </item>
+</favoritos>

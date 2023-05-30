@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="examen.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<mayorista>
+  <nombre>Viajes Romero</nombre>
+  <ruta codigo="D-001">
+    <destino>
+      <nombre>Dublín</nombre>
+      <tipo>Estudios</tipo>
+      <precioEstimado moneda="E">1300</precioEstimado>
+    </destino>
+    <fechaIni>2022-06-02</fechaIni>
+    <fechaFin>2022-06-09</fechaFin>
+    <etiqueta>Lúdico</etiqueta>
+    <etiqueta>Idiomas</etiqueta>
+    <destacados>
+      <poi>
+        <nombre>The Book of Kells and the Old Library Exhibition</nombre>
+        <web>https://www.tcd.ie/visitors/book-of-kells</web>
+        <horario>9:30–17.00</horario>
+        <etiqueta>Cultural</etiqueta>
+      </poi>
+      <poi>
+        <nombre>Temple Bar</nombre>
+        <web>https://thetemplebarpub.com/</web>
+        <horario>17:00</horario>
+        <etiqueta>Música</etiqueta>
+        <etiqueta>Ocio</etiqueta>
+      </poi>
+      <poi>
+        <nombre>Grafton Street</nombre>
+        <web>https://www.graftonstreet.ie/</web>
+        <horario>9:00-17:00</horario>
+        <etiqueta>Compras</etiqueta>
+        <etiqueta>Arte</etiqueta>
+      </poi>
+    </destacados>
+
+  </ruta>
+  <ruta codigo="P-001">
+    <bloqueado estado="no"/>
+    <destino>
+      <nombre>Oporto</nombre>
+      <tipo>Citi Break</tipo>
+      <precioEstimado moneda="E">425.5</precioEstimado>
+    </destino>
+    <fechaIni>2021-04-12</fechaIni>
+    <fechaFin>2021-04-17</fechaFin>
+    <etiqueta>De moda</etiqueta>
+    <etiqueta>Cultural</etiqueta>
+    <etiqueta>Enológico</etiqueta>
+
+    <destacados>
+      <poi>
+        <nombre>Iglesia y Torre de los Clérigos</nombre>
+        <web>http://clerigos.com</web>
+        <horario>10:00-13:30</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Cultural</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Librería Lello e Irmao</nombre>
+        <web>https://harrypotter.lello.com</web>
+        <horario></horario>
+        <etiqueta>Infantil</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Bodega Sandeman</nombre>
+        <web>http://local.com</web>
+        <horario>16:00-20:00</horario>
+        <etiqueta>Histórico</etiqueta>
+        <etiqueta>Enológico</etiqueta>
+      </poi>
+
+    </destacados>
+
+
+  </ruta>
+  <ruta codigo="J-004">
+    <bloqueado estado="si"/>
+    <destino>
+      <nombre>Jaen</nombre>
+      <tipo>Ruta</tipo>
+      <precioEstimado moneda="L">999</precioEstimado>
+    </destino>
+    <fechaIni visible="si">2021-10-03</fechaIni>
+    <fechaFin visible="no">2021-10-06</fechaFin>
+    <etiqueta>Rutas</etiqueta>
+    <etiqueta>Cultural</etiqueta>
+
+    <destacados>
+      <poi>
+        <nombre>Cazorla</nombre>
+        <web>http://cazorla.com</web>
+        <horario></horario>
+        <etiqueta>Ecológico</etiqueta>
+      </poi>
+      <poi>
+        <nombre>Úbeda y Baeza</nombre>
+        <web>http://ubeda.com/rutas.html</web>
+        <horario>9:00-21:00</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Histórico</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Castillo de Santa Catalina</nombre>
+        <web>http://jaen.es/castillo</web>
+        <horario>8:00-17:00</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Histórico</etiqueta>
+        <etiqueta>Ciudad</etiqueta>
+      </poi>
+    </destacados>
+
+  </ruta>
+</mayorista>

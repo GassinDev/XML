@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root" type="Troot"/>
+
+    <xs:complexType name="Troot">
+        <xs:sequence>
+            <xs:element name="origen" type="Torigen"/>
+            <xs:element name="elaborado" type="xs:dateTime"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="prediccion" type="Tprediccion"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Torigen">
+        <xs:sequence>
+            <xs:element name="productor" type="xs:string"/>
+            <xs:element name="web" type="xs:string"/>
+            <xs:element name="enlace" type="xs:string"/>
+            <xs:element name="copyright" type="xs:string"/>
+            <xs:element name="nota_legal" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="idioma" type="xs:language" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="Tprediccion">
+        <xs:sequence>
+            <xs:element name="dia" type="Tdia" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tdia">
+        <xs:sequence>
+            <xs:element name="prob_precipitacion" type="Tprob_precipitacion" maxOccurs="unbounded"/>
+            <xs:element name="viento" type="Tviento" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="temperatura" type="Ttemperatura"/>
+        </xs:sequence>
+        <xs:attribute name="fecha" type="xs:date" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Tprob_precipitacion">
+        <xs:simpleContent>
+            <xs:extension base="Tprobabilidad_lluvia">
+                <xs:attribute name="hora" type="Thora" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Tprobabilidad_lluvia">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+            <xs:fractionDigits value="1"/> <!--Para que minimo haya un decimal-->
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tviento">
+        <xs:sequence>
+            <xs:element name="direccion" type="xs:string"/>
+            <xs:element name="velocidad" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="hora" type="Thora" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Ttemperatura">
+        <xs:sequence>
+            <xs:element name="maxima" type="xs:integer"/>
+            <xs:element name="minima" type="xs:integer"/>
+            <xs:element name="dato" type="Tdato" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tdato">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="hora" type="Thora" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Thora">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="23"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

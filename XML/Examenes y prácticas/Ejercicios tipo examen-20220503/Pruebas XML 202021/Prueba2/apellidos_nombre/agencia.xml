@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<agencia>
+  <nombre>Viajes Romero</nombre>
+  <viaje codigo="Oporto-001">
+    <destino>
+      <nombre>Oporto</nombre>
+      <tipo>Citi Break</tipo>
+    </destino>
+    <fechaIni>2021-04-12</fechaIni>
+    <fechaFin>2021-04-17</fechaFin>
+    <etiqueta>De moda</etiqueta>
+    <etiqueta>Cultural</etiqueta>
+    <etiqueta>Enológico</etiqueta>
+
+    <destacados>
+      <poi>
+        <nombre>Iglesia y Torre de los Clérigos</nombre>
+        <web>http://clerigos.com</web>
+        <horario>10:00-13:30</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Cultural</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Librería Lello e Irmao</nombre>
+        <web>https://harrypotter.lello.com</web>
+        <horario></horario>
+        <etiqueta>Infantil</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Bodega Sandeman</nombre>
+        <web>http://local.com</web>
+        <horario>16:00-20:00</horario>
+        <etiqueta>Histórico</etiqueta>
+        <etiqueta>Enológico</etiqueta>
+      </poi>
+
+    </destacados>
+
+    <precioEstimado moneda="E">425.5</precioEstimado>
+  </viaje>
+  <viaje codigo="Jaen-004">
+    <bloqueado />
+    <destino>
+      <nombre>Jaen</nombre>
+      <tipo>Ruta</tipo>
+    </destino>
+    <fechaIni visible="si">2021-10-03</fechaIni>
+    <fechaFin visible="no">2021-10-06</fechaFin>
+    <etiqueta>Rutas</etiqueta>
+    <etiqueta>Cultural</etiqueta>
+
+    <destacados>
+      <poi>
+        <nombre>Cazorla</nombre>
+        <web>http://cazorla.com</web>
+        <horario></horario>
+        <etiqueta>Ecológico</etiqueta>
+      </poi>
+      <poi>
+        <nombre>Úbeda y Baeza</nombre>
+        <web>http://ubeda.com/rutas.html</web>
+        <horario>9:00-21:00</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Histórico</etiqueta>
+
+      </poi>
+      <poi>
+        <nombre>Castillo de Santa Catalina</nombre>
+        <web>http://jaen.es/castillo</web>
+        <horario>8:00-17:00</horario>
+        <etiqueta>Monumental</etiqueta>
+        <etiqueta>Histórico</etiqueta>
+        <etiqueta>Ciudad</etiqueta>
+      </poi>
+
+    </destacados>
+
+    <precioEstimado moneda="L">1200.1</precioEstimado>
+  </viaje>
+</agencia>

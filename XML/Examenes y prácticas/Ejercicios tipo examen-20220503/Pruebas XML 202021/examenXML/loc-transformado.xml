@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Generado por Agencia Estatal de Meteorología - AEMET.
+ https://www.aemet.es
+-->
+<eltiempo derechos="© AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma.">
+  <localidad>Sanlúcar de Barrameda</localidad>
+  <maximas>
+    <valor>27 (2021-06-18)</valor>
+    <valor>25 (2021-05-23)</valor>
+    <valor>11 (2020-12-12)</valor>
+  </maximas>
+  <dia fecha="2020-12-12">3, 11, 7, 5</dia>
+  <dia fecha="2021-05-23">21, 25, 14</dia>
+  <dia fecha="2021-06-18">24, 22</dia>
+</eltiempo>

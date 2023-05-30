@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prediccion>
+  <!--Windguru: http://www.windguru.com-->
+  <muestra fecha="2022-05-01">
+    <fiabilidad>100</fiabilidad>
+    <rango>1.- De 71.2 a 67.45 (Fahrenheit).</rango>
+    <sopla>
+      <hora>09:00: 13</hora>
+      <hora>12:00: 15</hora>
+      <hora>18:00: 17</hora>
+    </sopla>
+  </muestra>
+  <muestra fecha="2022-05-03">
+    <fiabilidad>100</fiabilidad>
+    <rango>2.- De 82.55 a 69 (Fahrenheit).</rango>
+    <sopla>
+      <hora>09:00: 17</hora>
+      <hora>12:00: 21</hora>
+      <hora>23:55: 23</hora>
+    </sopla>
+  </muestra>
+  <!--AEMET: http://www.aemet.es-->
+  <muestra fecha="2022-05-01">
+    <fiabilidad>90</fiabilidad>
+    <rango>1.- De 31.2 a 18.45 (Celsius).</rango>
+    <sopla>
+      <hora>09:00: 11</hora>
+      <hora>12:00: 13</hora>
+      <hora>18:00: 15</hora>
+    </sopla>
+  </muestra>
+  <muestra fecha="2022-05-03">
+    <fiabilidad>90</fiabilidad>
+    <rango>2.- De 37.2 a 19.5 (Celsius).</rango>
+    <sopla>
+      <hora>09:00: 7</hora>
+      <hora>12:00: 5</hora>
+      <hora>18:00: 15</hora>
+    </sopla>
+  </muestra>
+  <!--Surf and Wind: http://www.sfwind.com-->
+  <muestra fecha="2022-05-01">
+    <fiabilidad>10</fiabilidad>
+    <rango>1.- De 80.2 a 60.45 (Fahrenheit).</rango>
+    <sopla>
+      <hora>09:00: 5</hora>
+      <hora>12:00: 6</hora>
+      <hora>18:00: 7</hora>
+    </sopla>
+  </muestra>
+  <muestra fecha="2022-05-03">
+    <fiabilidad>10</fiabilidad>
+    <rango>2.- De 92.55 a 80.5 (Fahrenheit).</rango>
+    <sopla>
+      <hora>09:00: 11</hora>
+      <hora>12:00: 2</hora>
+      <hora>23:55: 4</hora>
+    </sopla>
+  </muestra>
+</prediccion>

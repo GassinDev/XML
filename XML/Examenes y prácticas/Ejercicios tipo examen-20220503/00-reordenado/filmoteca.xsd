@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:complexType name="Tfilmoteca">
+        <xs:sequence>
+            <xs:element name="propietario" type="xs:string" />
+            <xs:element name="precioVenta" type="xs:string"/>
+            <xs:element name="peliculas" type="Tpelicula"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tpelicula">
+        <xs:sequence>
+            <xs:element name="pelicula" type="TTpelicula" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="TTpelicula">
+        <xs:sequence>
+            <xs:element name="titulo" type="xs:string"/>
+            <xs:element name="tituloOriginal" type="TtituloOriginal" minOccurs="0" />
+            <xs:element name="cartel" type="Tcartel"/>
+            <xs:element name="duracion" type="xs:string"/>
+            <xs:element name="director" type="xs:string"/>
+            <xs:element name="reparto" type="Treparto"/>
+            <xs:element name="sinopsis" type="Tsinopsis"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="xs:ID" />
+    </xs:complexType>
+
+    <xs:complexType name="TtituloOriginal">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="Tlang" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Tlang">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="es" />
+            <xs:enumeration value="en" />
+            <xs:enumeration value="fr" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tcartel">
+        <xs:attribute name="fuente" type="xs:anyURI" use="required"/> <!-- para url xs:anyURI -->
+    </xs:complexType>
+
+    <xs:complexType name="Treparto">
+        <xs:sequence>
+            <xs:element name="actor" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Tsinopsis">
+        <xs:sequence>
+            <xs:element name="parrafo" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="filmoteca" type="Tfilmoteca"></xs:element>
+
+</xs:schema>

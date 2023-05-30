@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tiempo>
+    <fuente fiabilidad="90">
+        <nombre>AEMET</nombre>
+        <web>http://www.aemet.es</web>
+        <dato>
+            <maxima escala="C">31.2</maxima>
+            <minima escala="C">18.45</minima>
+            <fecha>2022-05-01</fecha>
+            <viento hora="09:00">11</viento>
+            <viento hora="12:00">13</viento>
+            <viento hora="18:00">15</viento>
+        </dato>
+        <dato>
+            <maxima escala="C">35.55</maxima>
+            <fecha>2022-05-02</fecha>
+            <viento hora="09:00">2</viento>
+            <viento hora="12:00">13</viento>
+            <viento hora="18:00">15</viento>
+        </dato>
+        <dato>
+            <maxima>37.2</maxima>
+            <minima>19.5</minima>
+            <fecha>2022-05-03</fecha>
+            <viento hora="09:00">7</viento>
+            <viento hora="12:00">5</viento>
+            <viento hora="18:00">15</viento>
+        </dato>
+    </fuente>
+    <fuente fiabilidad="100">
+        <nombre>Windguru</nombre>
+        <web>http://www.windguru.com</web>
+        <dato>
+            <maxima escala="F">71.2</maxima>
+            <minima escala="F">67.45</minima>
+            <fecha>2022-05-01</fecha>
+            <viento hora="09:00">13</viento>
+            <viento hora="12:00">15</viento>
+            <viento hora="18:00">17</viento>
+        </dato>
+        <dato>
+            <maxima escala="F">72</maxima>
+            <fecha>2022-05-02</fecha>
+            <viento hora="09:00">5</viento>
+            <viento hora="12:00">11</viento>
+            <viento hora="18:00">18</viento>
+        </dato>
+        <dato>
+            <maxima escala="F">82.55</maxima>
+            <minima escala="F">69</minima>
+            <fecha>2022-05-03</fecha>
+            <viento hora="09:00">17</viento>
+            <viento hora="12:00">21</viento>
+            <viento hora="23:55">23</viento>
+        </dato>
+    </fuente>
+    <fuente fiabilidad="10">
+        <nombre>Surf and Wind</nombre>
+        <web>http://www.sfwind.com</web>
+        <dato>
+            <maxima escala="F">80.2</maxima>
+            <minima escala="F">60.45</minima>
+            <fecha>2022-05-01</fecha>
+            <viento hora="09:00">5</viento>
+            <viento hora="12:00">6</viento>
+            <viento hora="18:00">7</viento>
+        </dato>
+        <dato>
+            <maxima escala="F">90.55</maxima>
+            <fecha>2022-05-02</fecha>
+            <viento hora="09:00">8</viento>
+            <viento hora="12:00">7</viento>
+            <viento hora="18:00">9</viento>
+        </dato>
+        <dato>
+            <maxima escala="F">92.55</maxima>
+            <minima escala="F">80.5</minima>
+            <fecha>2022-05-03</fecha>
+            <viento hora="09:00">11</viento>
+            <viento hora="12:00">2</viento>
+            <viento hora="23:55">4</viento>
+        </dato>
+    </fuente>
+
+</tiempo>

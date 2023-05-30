@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="filmoteca.xsd"?>
+
+<filmoteca>
+	<propietario>Alvaro  Arbeloa</propietario>
+	<precioVenta>1200</precioVenta>
+	<peliculas>
+		<pelicula codigo="ES-001">
+			<titulo>Amador</titulo>
+			<cartel fuente="amador.jpg"/>
+			<duracion>121</duracion>
+			<director>FERNANDO LEÓN DE ARANOA</director>
+			<reparto>
+				<actor>CELSO BUGALLO</actor>
+				<actor>SONIA ALMARCHA</actor>
+				<actor>MANOLO SOLO</actor>
+				<actor>MAGALY SOLIER</actor>
+				<actor>PRISCILLA DELGADO</actor>
+				<actor>FANY DE CASTRO</actor>
+			</reparto>
+			<sinopsis>
+				<parrafo>Marcela es una joven con pocos recursos económicos que cuida de Amador, un anciano que vive postrado en su cama y sin familia. Se confiesan mutuos secretos, pero cuando él muere, Marcela decide ocultar el suceso, muy a su pesar, para poder seguir cobrando su salario.</parrafo>
+			</sinopsis>
+		</pelicula>
+		<pelicula codigo="A-001">
+			<titulo>La red social</titulo>
+			<tituloOriginal lang="en">The social network</tituloOriginal>
+			<cartel fuente="redsocial.jpg"/>
+			<duracion>93 </duracion>
+			<director>DAVID FINCHER</director>
+			<reparto>
+				<actor>JESSE EISENBERG</actor>
+				<actor>JUSTIN TIMBERLAKE</actor>
+				<actor>ROONEY MARA</actor>
+				<actor>ANDREW GARFIELD</actor>
+				<actor>BRENDA SONG</actor>
+				<actor>RASHIDA JONES</actor>
+			</reparto>
+			<sinopsis><parrafo>En 2003, Mark Zucerberg, un joven alumno de Harvard y un genio programando, comenzó a desarrollar una nueva idea. Seis años y 500 millones de amigos después, se convierte en el billonario más joven de la historia... pero con consecuencias personales.</parrafo></sinopsis>
+		</pelicula>
+	</peliculas>
+</filmoteca>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<inventario>
+  <responsable>Amanda Smith</responsable>
+  <mail>amanda@local.com</mail>
+  <tel tipo="trabajo">4455</tel>
+  <tel tipo="particular">6666644</tel>
+  <tel tipo="móvil">6789865</tel>
+  <espacio code="aula-01">
+    <nombre>Aula 1nformáticos</nombre>
+    <responsable>Steven Borg</responsable>
+    <item>
+      <nombre>PC HP </nombre>
+      <ns>AS-1234</ns>
+      <cantidad>12</cantidad>
+      <categoria>sobremesa</categoria>
+      <categoria>renting</categoria>
+    </item>
+    <item>
+      <nombre>Teclados mecánicos </nombre>
+      <ns>AS-1234</ns>
+      <cantidad>2</cantidad>
+      <categoria>periféricos</categoria>
+      <categoria>renting</categoria>
+    </item>
+    <item>
+      <nombre>Impresora Laser </nombre>
+      <ns>IMP-1234</ns>
+      <cantidad>1</cantidad>
+      <categoria>impresora</categoria>
+    </item>
+  </espacio>
+  <espacio code="aula-02">
+    <nombre>Aula 1 informáticos</nombre>
+    <responsable>Frank Rutz</responsable>
+    <item>
+      <nombre>Comprobador redes</nombre>
+      <ns>Tel-1234</ns>
+      <cantidad>6</cantidad>
+      <categoria>redes</categoria>
+    </item>
+    <item>
+      <nombre>Monitores</nombre>
+      <ns>Tel-1234</ns>
+      <cantidad>12</cantidad>
+      <categoria>redes</categoria>
+    </item>
+    <item>
+      <nombre>Ratones</nombre>
+      <ns>Tel-1234</ns>
+      <cantidad>4</cantidad>
+      <categoria>redes</categoria>
+    </item>
+    <item>
+      <nombre>Antenas</nombre>
+      <ns>Ant-21</ns>
+      <cantidad>0</cantidad>
+      <categoria>redes</categoria>
+    </item>
+  </espacio>
+  <espacio code="A000">
+    <nombre> Pendiente asignación</nombre>
+    <responsable>Alfredo Fango</responsable>
+  </espacio>
+</inventario>

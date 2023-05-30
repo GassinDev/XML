@@ -1,0 +1,9 @@
+Nombre - Cantidad - Categorías 
+============================== 
+Antenas - 0 - redes 
+Impresora Laser  - 1 - impresora 
+Teclados mecánicos  - 2 - periféricos & renting 
+Ratones - 4 - redes 
+Comprobador redes - 6 - redes 
+PC HP  - 12 - sobremesa & renting 
+Monitores - 12 - redes 

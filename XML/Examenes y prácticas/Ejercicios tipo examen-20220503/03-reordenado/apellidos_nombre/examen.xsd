@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="xbel" type="Txbel" />
+
+    <xs:complexType name="Txbel">
+        <xs:sequence>
+            <xs:element name="owner" type="xs:string" />
+            <xs:element name="desc" type="xs:string" minOccurs="0" />
+            <xs:element name="folder" type="Tfolder" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="version" type="Tversion" use="required" />
+        <xs:attribute name="added" type="xs:date" use="optional" />
+    </xs:complexType>
+
+    <xs:simpleType name="Tversion">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tfolder">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="desc" type="xs:string" minOccurs="0"/>
+            <xs:element name="bookmark" type="Tbookmark" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="folded" type="TTfolded" use="required" />
+    </xs:complexType>
+
+    <xs:simpleType name="TTfolded">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="yes|no" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Tbookmark">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="desc" type="xs:string" minOccurs="0" />
+            <xs:element name="ranking" type="TTranking" minOccurs="0"/>
+            <xs:element name="tag" type="xs:string" maxOccurs="unbounded" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute name="href" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="Tranking">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="1" />
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="TTranking">
+        <xs:simpleContent>
+            <xs:extension base="Tranking">
+                <xs:attribute name="type" type="Ttype" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Ttype">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="google" />
+            <xs:enumeration value="altavista" />
+            <xs:enumeration value="yahoo" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

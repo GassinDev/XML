@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<?xml-model href="loc.dtd"?>
+
+<root>
+  <origen idioma="es-es">
+    <productor>Agencia Estatal de Meteorología - AEMET.</productor>
+    <web>https://www.aemet.es</web>
+    <enlace>https://www.aemet.es/es/eltiempo/prediccion/municipios/sanlucar-de-barrameda-id11032</enlace>
+    <copyright>© AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma.</copyright>
+    <nota_legal>https://www.aemet.es/es/nota_legal</nota_legal>
+  </origen>
+  <elaborado>2021-05-19T05:55:40</elaborado>
+  <nombre>Sanlúcar de Barrameda</nombre>
+  <prediccion>
+    <dia fecha="2021-06-18">
+      <prob_precipitacion hora="12"> 22.2 </prob_precipitacion>
+      <prob_precipitacion hora="14"> 25.8</prob_precipitacion>
+      <prob_precipitacion hora="18">10.5</prob_precipitacion>
+      <viento hora="12">
+        <direccion></direccion>
+        <velocidad></velocidad>
+      </viento>
+      <viento hora="14">
+        <direccion></direccion>
+        <velocidad></velocidad>
+      </viento>
+
+      <temperatura>
+        <maxima>27</maxima>
+        <minima>17</minima>
+        <dato hora="06"></dato>
+        <dato hora="12"></dato>
+        <dato hora="18">24</dato>
+        <dato hora="23">22</dato>
+      </temperatura>
+    </dia>
+
+    <dia fecha="2021-05-23">
+      <prob_precipitacion hora="12"> 22.2 </prob_precipitacion>
+      <prob_precipitacion hora="14"> 25.8</prob_precipitacion>
+      <prob_precipitacion hora="18">10.5</prob_precipitacion>
+      <viento hora="12">
+        <direccion></direccion>
+        <velocidad></velocidad>
+      </viento>
+      <viento hora="14">
+        <direccion></direccion>
+        <velocidad></velocidad>
+      </viento>
+
+      <temperatura>
+        <maxima>25</maxima>
+        <minima>17</minima>
+        <dato hora="12">21</dato>
+        <dato hora="06"></dato>
+        <dato hora="23">14</dato>
+        <dato hora="18">25</dato>
+
+      </temperatura>
+    </dia>
+
+    <dia fecha="2020-12-12">
+      <prob_precipitacion hora="12"> 22.2 </prob_precipitacion>
+      <prob_precipitacion hora="14"> 25.8</prob_precipitacion>
+      <prob_precipitacion hora="18">10.5</prob_precipitacion>
+ 
+
+      <temperatura>
+        <maxima>11</maxima>
+        <minima>3</minima>
+        <dato hora="18">7</dato>
+        <dato hora="06">3</dato>
+        <dato hora="12">11</dato>
+        <dato hora="23">5</dato>
+      </temperatura>
+    </dia>    
+  </prediccion>
+</root>
